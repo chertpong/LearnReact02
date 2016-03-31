@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Hello from './component/hello.component';
+import { API_URL } from './config';
 
-ReactDom.render(<Hello />, document.querySelector('#app'));
+import CommentBox from './component/CommentBox';
+
+ReactDom.render(<CommentBox url={API_URL} pollInterval={2000} />, document.querySelector('#app'));
